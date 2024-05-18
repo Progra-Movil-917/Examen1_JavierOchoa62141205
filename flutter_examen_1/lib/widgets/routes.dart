@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'screens/book_list_screen.dart';
+import 'package:flutter_examen_1/screens/book_list_screen.dart';
 import 'screens/book_detail_screen.dart';
 
 final GoRouter router = GoRouter(
