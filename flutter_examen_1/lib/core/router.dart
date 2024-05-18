@@ -10,10 +10,15 @@ final GoRouter router = GoRouter(
       builder: (context, state) => BookListScreen(),
     ),
     GoRoute(
-      path: '/book/:index',
+      path: '/bookDetails/:index',
       builder: (context, state) {
-        final index = int.parse(state.params['index']!);
-        return BookDetailScreen(index: index);
+        final index = state.params['index'] as int?;
+        if (index != null) {
+          return BookDetailScreen(index: index);
+        } else {
+          // Manejar el caso en el que no se pueda obtener el índice de la ruta
+          return Container(); // O cualquier otra pantalla o widget apropiado
+        }
       },
     ),
   ],

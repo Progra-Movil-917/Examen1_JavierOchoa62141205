@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_examen_1/models/book.dart';
+import 'package:flutter_examen_1/services/book_service.dart';
 
 class BookDetailScreen extends StatelessWidget {
   final int index;
